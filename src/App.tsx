@@ -18,16 +18,16 @@ function App() {
         </Text>
       </Flex>
       <Grid templateColumns="repeat(2, 1fr)" gap={10}>
-        <GridItem w="100%" px="5" py="10" boxShadow="base" borderRadius="20">
+        <GridItem w="100%" px="5" py="10" boxShadow="base" borderRadius="20" display="flex" flexDir="column">
           <Text pb="5" textAlign="center" fontSize="1.3rem" fontWeight="semibold">
             Quote:
           </Text>
-          <Text textAlign="center" fontSize="1.2rem">
+          <Text fontSize="1.5rem" fontWeight="bold" m="auto">
             "Cos tam cos tam"
           </Text>
         </GridItem>
-        <GridItem w="100%" boxShadow="base" borderRadius="20" p="5">
-          <Text py="5" textAlign="center" fontSize="1.3rem" fontWeight="semibold">
+        <GridItem w="100%" boxShadow="base" borderRadius="20" px="5" py="10">
+          <Text pb="5" textAlign="center" fontSize="1.3rem" fontWeight="semibold">
             Who said that?
           </Text>
           <Box mx="5">
