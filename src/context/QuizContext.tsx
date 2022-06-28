@@ -130,7 +130,7 @@ export function QuizProvider({ children }: any) {
     {
       id: 22,
       who: "Other",
-      quote: `"Has the concept of "women having choices"gone too far? We've assembled his diverse panel of white man in bow-ties to talk about abortion."`,
+      quote: `"Has the concept of "women having choices" gone too far? We've assembled this diverse panel of white man in bow-ties to talk about abortion."`,
     },
     {
       id: 23,
@@ -159,8 +159,8 @@ export function QuizProvider({ children }: any) {
     },
     {
       id: 28,
-      who: "Other",
-      quote: `"I Never Know If I Can Handle Anything. That's What Makes My Life So Exciting"`,
+      who: "Todd",
+      quote: `"I never know if I can handle anything. That's what makes my life so exciting"`,
     },
     {
       id: 29,
@@ -181,6 +181,41 @@ export function QuizProvider({ children }: any) {
       id: 32,
       who: "BoJack",
       quote: `"Sweetie, no I think this is stupid and a waste of everyone’s time but you’re my girlfriend and I care about you so I’m here."`,
+    },
+    {
+      id: 33,
+      who: "Todd",
+      quote: `"Call me four out of five dentists because I agree!"`,
+    },
+    {
+      id: 34,
+      who: "Todd",
+      quote: `"I do love having my picture taken, it's proof I exist"`,
+    },
+    {
+      id: 35,
+      who: "Todd",
+      quote: `"As my blood type always says, B positive!"`,
+    },
+    {
+      id: 37,
+      who: "Todd",
+      quote: `"You know, sometimes I feel like my whole life is just a series of loosely-related wacky misadventures"`,
+    },
+    {
+      id: 38,
+      who: "Todd",
+      quote: `"You are all the things that are wrong with you. It’s not the alcohol, or the drugs or any of the shitty things that happened to you in your career or when you were a kid. It’s you."`,
+    },
+    {
+      id: 39,
+      who: "Todd",
+      quote: `"Fool me once, fool me twice, fool me chicken soup with rice"`,
+    },
+    {
+      id: 40,
+      who: "Todd",
+      quote: `"It's always nice to be included in a sentence someone says."`,
     },
   ]);
 
