@@ -9,67 +9,55 @@ import todd from "./public/todd.png";
 function App() {
   return (
     <Box mx="100px">
-      <Flex justifyContent="space-around" my="40px" p="5" boxShadow="base" borderRadius="50">
+      <Text mt="10" textAlign="center" fontSize="3rem" fontWeight="bold">
+        Bojack Horseman quotes quiz
+      </Text>
+      <Flex justifyContent="center" my="40px">
         <Text fontSize="1.5rem" fontWeight="semibold">
           Question: 3/10
         </Text>
-        <Text fontSize="1.5rem" fontWeight="semibold">
-          Score: 2
-        </Text>
       </Flex>
-      <Grid templateColumns="repeat(2, 1fr)" gap={10}>
-        <GridItem w="100%" px="5" py="10" boxShadow="base" borderRadius="20" display="flex" flexDir="column">
-          <Text pb="5" textAlign="center" fontSize="1.3rem" fontWeight="semibold">
-            Quote:
-          </Text>
+      <Flex flexDir="column">
+        <Flex w="100%" minH="300px">
           <Text fontSize="1.5rem" fontWeight="bold" m="auto">
-            "Cos tam cos tam"
+            "Quote blah blah blah"
           </Text>
-        </GridItem>
-        <GridItem w="100%" boxShadow="base" borderRadius="20" px="5" py="10">
+        </Flex>
+        <Box mt="10">
           <Text pb="5" textAlign="center" fontSize="1.3rem" fontWeight="semibold">
             Who said that?
           </Text>
-          <Box mx="5">
-            <Grid templateColumns="repeat(3, 1fr)" gap={3}>
-              <GridItem w="100%">
-                <Image w="210px" h="180px" m="auto" borderRadius="40" _hover={{ boxShadow: "xl" }} src={bojack} />
-              </GridItem>
-              <GridItem w="100%">
-                <Image w="210px" h="180px" m="auto" borderRadius="40" _hover={{ boxShadow: "xl" }} src={todd} />
-              </GridItem>
-              <GridItem w="100%">
-                <Image
-                  w="210px"
-                  h="180px"
-                  m="auto"
-                  borderRadius="40"
-                  _hover={{ boxShadow: "xl" }}
-                  src={princesscarolyn}
-                />
-              </GridItem>
-              <GridItem mt="10" w="100%">
-                <Image w="210px" h="180px" m="auto" borderRadius="40" _hover={{ boxShadow: "xl" }} src={diane} />
-              </GridItem>
-              <GridItem mt="10" w="100%">
-                <Image
-                  w="210px"
-                  h="180px"
-                  m="auto"
-                  borderRadius="40"
-                  _hover={{ boxShadow: "xl" }}
-                  src={mrpeanutbutter}
-                />
-              </GridItem>
-              <GridItem mt="10" w="100%">
-                <Button w="210px" h="180px" m="auto" borderRadius="40" _hover={{ boxShadow: "xl" }}>
-                  None of them
-                </Button>
-              </GridItem>
-            </Grid>
-          </Box>
-        </GridItem>
-      </Grid>
+          <Flex flexDir="row" mx="5">
+            <Box w="100%" m="auto">
+              <Image w="210px" h="180px" m="auto" borderRadius="40" _hover={{ boxShadow: "xl" }} src={bojack} />
+            </Box>
+            <Box w="100%" m="auto">
+              <Image
+                w="210px"
+                h="180px"
+                m="auto"
+                borderRadius="40"
+                _hover={{ boxShadow: "xl" }}
+                src={princesscarolyn}
+              />
+            </Box>
+            <Box w="100%" m="auto">
+              <Image w="210px" h="180px" m="auto" borderRadius="40" _hover={{ boxShadow: "xl" }} src={todd} />
+            </Box>
+            <Box w="100%" m="auto">
+              <Image w="210px" h="180px" m="auto" borderRadius="40" _hover={{ boxShadow: "xl" }} src={diane} />
+            </Box>
+            <Box w="100%" m="auto">
+              <Image w="210px" h="180px" m="auto" borderRadius="40" _hover={{ boxShadow: "xl" }} src={mrpeanutbutter} />
+            </Box>
+            <Box w="100%" m="auto">
+              <Flex w="210px" h="180px" bg="gray.200" borderRadius="40" _hover={{ boxShadow: "xl" }} m="auto">
+                <Text m="auto">None of them</Text>
+              </Flex>
+            </Box>
+          </Flex>
+        </Box>
+      </Flex>
     </Box>
   );
 }
