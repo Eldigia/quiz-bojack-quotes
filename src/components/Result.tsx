@@ -3,7 +3,7 @@ import React from "react";
 import { useQuizContext } from "../context/QuizContext";
 
 export const Result = () => {
-  const { isStarted, isFinished } = useQuizContext();
+  const { answers, startQuizGame } = useQuizContext();
 
   return (
     <Flex justifyContent="center" alignItems="center" flexDir="column" mt="40">
@@ -11,9 +11,12 @@ export const Result = () => {
         Your score:
       </Text>
       <Text my="10" fontSize="2rem" fontWeight="semibold">
-        7/10
+        {answers?.reduce(function (a, b) {
+          return a + b;
+        })}
+        /10
       </Text>
-      <Button bg="#f8961e" h="80px" w="150px" mt="10">
+      <Button bg="#f8961e" h="80px" w="150px" mt="10" onClick={startQuizGame}>
         Try again!
       </Button>
     </Flex>
