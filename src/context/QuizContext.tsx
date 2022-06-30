@@ -6,7 +6,7 @@ type QuizContextValues = {
   isGame: boolean;
   useIsGame(isGame: boolean): void;
   data: DataDetails[];
-  setData(tasks: DataDetails[]): void;
+  setData(quotes: DataDetails[]): void;
 };
 
 const QuizContext = createContext<QuizContextValues>({
