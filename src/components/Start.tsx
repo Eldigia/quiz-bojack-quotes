@@ -7,8 +7,11 @@ export const Start = () => {
 
   return (
     <Flex justifyContent="center" alignItems="center" flexDir="column" mt="40">
-      <Text my="10" fontSize="1.5rem" fontWeight="semibold">
-        Do you remember who said it on the show? Let's check it out!
+      <Text my="5" fontSize="1.5rem" fontWeight="semibold">
+        Do you remember who said it on the show? Answear this 10 simple questions.
+      </Text>
+      <Text my="5" fontSize="1.5rem" fontWeight="semibold">
+        Let's go!
       </Text>
       <Button
         bg="#f8961e"
