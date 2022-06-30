@@ -3,7 +3,7 @@ import React from "react";
 import { useQuizContext } from "../context/QuizContext";
 
 export const Result = () => {
-  const { useIsGame } = useQuizContext();
+  const { isStarted, isFinished } = useQuizContext();
 
   return (
     <Flex justifyContent="center" alignItems="center" flexDir="column" mt="40">

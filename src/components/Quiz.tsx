@@ -8,7 +8,7 @@ import todd from "../public/todd.png";
 import { useQuizContext } from "../context/QuizContext";
 
 export const Quiz = () => {
-  const { useIsStart, useIsGame } = useQuizContext();
+  const { questions, isFinished } = useQuizContext();
 
   return (
     <Box>

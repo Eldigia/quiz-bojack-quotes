@@ -6,14 +6,15 @@ import { Start } from "./components/Start";
 import { useQuizContext } from "./context/QuizContext";
 
 function App() {
-  const { isStart, isGame } = useQuizContext();
+  const { isStarted, isFinished } = useQuizContext();
 
   return (
     <Box mx="100px">
       <Text mt="10" textAlign="center" fontSize="3rem" fontWeight="bold">
         Bojack Horseman quotes quiz
       </Text>
-      {isStart ? <Start /> : isGame ? <Quiz /> : <Result />}
+
+      {isFinished ? <Result /> : isStarted ? <Quiz /> : <Start />}
     </Box>
   );
 }

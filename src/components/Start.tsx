@@ -3,7 +3,7 @@ import React from "react";
 import { useQuizContext } from "../context/QuizContext";
 
 export const Start = () => {
-  const { useIsStart } = useQuizContext();
+  const { startQuizGame } = useQuizContext();
 
   return (
     <Flex justifyContent="center" alignItems="center" flexDir="column" mt="40">
@@ -17,7 +17,7 @@ export const Start = () => {
         mt="10"
         _hover={{ boxShadow: "lg", bg: "#f8961e", opacity: "0.8" }}
         _active={{ boxShadow: "lg", bg: "#f8961e", opacity: "0.8" }}
-        onClick={() => useIsStart(false)}
+        onClick={startQuizGame}
       >
         Start !
       </Button>

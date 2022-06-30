@@ -1,22 +1,15 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { PropsWithChildren, createContext, useContext, useState } from "react";
 
 type QuizContextValues = {
-  isStart: boolean;
-  useIsStart(isStart: boolean): void;
-  isGame: boolean;
-  useIsGame(isGame: boolean): void;
   data: DataDetails[];
-  setData(quotes: DataDetails[]): void;
+  questions: DataDetails[];
+  startQuizGame(): void;
+  isStarted: boolean;
+  isFinished: boolean;
+  currentStep: number;
 };
 
-const QuizContext = createContext<QuizContextValues>({
-  isStart: true,
-  useIsStart: () => {},
-  isGame: true,
-  useIsGame: () => {},
-  data: [],
-  setData() {},
-});
+const QuizContext = createContext<QuizContextValues>({} as QuizContextValues);
 
 export function useQuizContext() {
   return useContext(QuizContext);
@@ -28,11 +21,35 @@ export type DataDetails = {
   quote: string;
 };
 
-export function QuizProvider({ children }: any) {
-  const [isStart, useIsStart] = useState(true);
-  const [isGame, useIsGame] = useState(true);
+export function QuizProvider({ children }: PropsWithChildren<{}>) {
+  const [answers, setAnswers] = useState<undefined | number[]>(undefined);
+  const [questions, setQuestions] = useState<DataDetails[]>([]);
 
-  const [data, setData] = useState<DataDetails[]>([
+  const isStarted = answers !== undefined;
+  const isFinished = answers ? answers.length >= 10 : false;
+  const currentStep = answers ? answers.length : 0;
+
+  function startQuizGame() {
+    setAnswers([]);
+    getNewData();
+  }
+
+  const newData: DataDetails[] = [];
+
+  function getNewData() {
+    let numbers = new Set<number>();
+    while (numbers.size < 10) {
+      let number = Math.floor(Math.random() * data.length);
+      numbers.add(number);
+    }
+    let numbersArray = [...numbers];
+    for (let item of numbersArray) {
+      newData.push(data[item]);
+    }
+    setQuestions(newData);
+  }
+
+  const data: DataDetails[] = [
     {
       id: 1,
       who: "BoJack",
@@ -228,9 +245,9 @@ export function QuizProvider({ children }: any) {
       who: "Todd",
       quote: `"It's always nice to be included in a sentence someone says."`,
     },
-  ]);
+  ];
 
-  const value = { data, setData, isStart, useIsStart, isGame, useIsGame };
+  const value = { answers, setAnswers, isStarted, isFinished, currentStep, startQuizGame, data, questions };
 
   return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>;
 }
