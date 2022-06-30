@@ -1,11 +1,19 @@
 import React, { createContext, useContext, useState } from "react";
 
 type QuizContextValues = {
+  isStart: boolean;
+  useIsStart(isStart: boolean): void;
+  isGame: boolean;
+  useIsGame(isGame: boolean): void;
   data: DataDetails[];
   setData(tasks: DataDetails[]): void;
 };
 
 const QuizContext = createContext<QuizContextValues>({
+  isStart: true,
+  useIsStart: () => {},
+  isGame: true,
+  useIsGame: () => {},
   data: [],
   setData() {},
 });
@@ -21,6 +29,9 @@ export type DataDetails = {
 };
 
 export function QuizProvider({ children }: any) {
+  const [isStart, useIsStart] = useState(true);
+  const [isGame, useIsGame] = useState(true);
+
   const [data, setData] = useState<DataDetails[]>([
     {
       id: 1,
@@ -219,7 +230,7 @@ export function QuizProvider({ children }: any) {
     },
   ]);
 
-  const value = { data, setData };
+  const value = { data, setData, isStart, useIsStart, isGame, useIsGame };
 
   return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>;
 }
