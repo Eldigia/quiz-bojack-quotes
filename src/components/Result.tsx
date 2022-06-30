@@ -16,7 +16,15 @@ export const Result = () => {
         })}
         /10
       </Text>
-      <Button bg="#f8961e" h="80px" w="150px" mt="10" onClick={startQuizGame}>
+      <Button
+        bg="#f8961e"
+        h="80px"
+        w="150px"
+        mt="10"
+        _hover={{ boxShadow: "lg", bg: "#f8961e", opacity: "0.8" }}
+        _active={{ boxShadow: "lg", bg: "#f8961e", opacity: "0.8" }}
+        onClick={startQuizGame}
+      >
         Try again!
       </Button>
     </Flex>
