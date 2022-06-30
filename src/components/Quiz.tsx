@@ -5,8 +5,11 @@ import princesscarolyn from "../public/princesscarolyn.png";
 import mrpeanutbutter from "../public/mrpeanutbutter.png";
 import diane from "../public/diane.png";
 import todd from "../public/todd.png";
+import { useQuizContext } from "../context/QuizContext";
 
 export const Quiz = () => {
+  const { useIsStart, useIsGame } = useQuizContext();
+
   return (
     <Box>
       <Flex justifyContent="center" my="40px">

@@ -1,7 +1,10 @@
 import { Button, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import { useQuizContext } from "../context/QuizContext";
 
 export const Result = () => {
+  const { useIsGame } = useQuizContext();
+
   return (
     <Flex justifyContent="center" alignItems="center" flexDir="column" mt="40">
       <Text my="10" fontSize="1.5rem" fontWeight="semibold">
