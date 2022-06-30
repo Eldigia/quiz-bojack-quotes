@@ -23,7 +23,7 @@ export const data: DataDetails[] = [
   },
   {
     id: 5,
-    who: "Mr. Peanutbutter's",
+    who: "Mr. Peanutbutter",
     quote: `"He's probably just razzin' ya. But he's a good dog. All bark, no bite. Oh, sorry! That's a Labrador expression. I guess in human terms it would be: he's all talk, no shooting you with an assault rifle.`,
   },
   {
@@ -114,7 +114,7 @@ export const data: DataDetails[] = [
   {
     id: 23,
     who: "BoJack",
-    quote: `"Couldn't hear you over the und of my calories not metabolizing."`,
+    quote: `"Couldn't hear you over the sound of my calories not metabolizing."`,
   },
   {
     id: 24,
