@@ -7,7 +7,7 @@ export const Result = () => {
 
   return (
     <Flex justifyContent="center" alignItems="center" flexDir="column" mt="40">
-      <Text my="10" fontSize="1.5rem" fontWeight="semibold">
+      <Text mb="5" fontSize="1.5rem" fontWeight="semibold">
         Your score:
       </Text>
       <Text my="10" fontSize="2rem" fontWeight="semibold">

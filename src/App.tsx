@@ -1,5 +1,4 @@
-import { Box, Button, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { Box, Text } from "@chakra-ui/react";
 import { Quiz } from "./components/Quiz";
 import { Result } from "./components/Result";
 import { Start } from "./components/Start";
@@ -13,7 +12,6 @@ function App() {
       <Text mt="10" textAlign="center" fontSize="3rem" fontWeight="bold">
         Bojack Horseman quotes quiz
       </Text>
-
       {isFinished ? <Result /> : isStarted ? <Quiz /> : <Start />}
     </Box>
   );

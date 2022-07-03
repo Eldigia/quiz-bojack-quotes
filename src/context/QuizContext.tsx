@@ -57,8 +57,6 @@ export function QuizProvider({ children }: PropsWithChildren<{}>) {
     let newAnswers = [...(answers || [])];
     newAnswers.push(value === questions[currentStep].who ? 1 : 0);
     setAnswers(newAnswers);
-    console.log(newAnswers);
-    console.log(currentStep);
   }
 
   const value = {
